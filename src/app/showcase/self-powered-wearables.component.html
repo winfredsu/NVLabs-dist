@@ -7,8 +7,11 @@
 				Respiration rate (rate of breathing) is a primary vital sign that indicates human body's functions. Meanwhile, breathing generates distance movement, which can be collected as energy. Can we monitor breathing condition using breathing energy?
 				</em>
 			</div>
-			<div class="embed-responsive embed-responsive-16by9 margin-b-30">
+			<div *ngIf="!ipFromCN" class="embed-responsive embed-responsive-16by9 margin-b-30">
     			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jK77uDYnLV4"></iframe>
+			</div>
+			<div *ngIf="ipFromCN" class="embed-responsive embed-responsive-16by9 margin-b-30">
+    			<iframe class="embed-responsive-item" src="https://www.bilibili.com/html/html5player.html?aid=14427876&cid=23539211&as_wide=1&autoplay=1&showinfo=0"></iframe>
 			</div>
 			<p>Breathing generates distance movement, which can be collected as energy. These energy can be utilized to measure the frequency of breathing, and even heart-rate and pulse oximeter. There's a wide range of applications such as wearable devices for babies, pregnants and fitness people. </p>
 			<p>However, one of the most challenging thing about monitoring breathing with breathing power is that <strong>the power is neither stable nor continuous</strong>. Using conventional microprocessors in such systems will lead to an unfortunate dilemma: the frequent power outage will destroy all intermediate data in the processor, while storing all those data into Flash memory is both energy and time consuming. </p> 

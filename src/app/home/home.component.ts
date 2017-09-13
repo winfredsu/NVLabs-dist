@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, Inject, Input, OnDestroy  } from '@ang
 import { DOCUMENT, Title } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { MdDialog, MdDialogRef } from '@angular/material';
-
+import { IpFromCNService } from '../ip-from-cn.service';
 
 @Component({
 	moduleId: module.id,
@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	height: number;
 	constructor(
 		public dialog: MdDialog,
+		private ipFromCNService: IpFromCNService,
 		@Inject(DOCUMENT) private document: Document,
 		@Input('AppComponent') private appComponent: AppComponent, 
 		private title: Title) {
@@ -46,10 +47,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
   openDialog(): void {
-  let dialogRef = this.dialog.open(NVPOneMinuteDialog, {
-		width: '990px',
-		height: 'auto'
-  });
+  	if (this.ipFromCNService.ipFromCN) {
+  		let dialogRef = this.dialog.open(NVPOneMinuteDialogCN, {
+			width: '990px',
+			height: 'auto'
+  		});
+  	} else {
+  		let dialogRef = this.dialog.open(NVPOneMinuteDialog, {
+			width: '990px',
+			height: 'auto'
+  		});
+  	}
 	}
 }
 
@@ -61,5 +69,16 @@ export class HomeComponent implements OnInit, OnDestroy {
 export class NVPOneMinuteDialog {
 	  constructor(
     public dialogRef: MdDialogRef<NVPOneMinuteDialog>,
+    ){}
+}
+
+@Component({
+	moduleId: module.id,
+	selector: 'nvp-one-minute-dialog-cn',
+	templateUrl: './nvp-one-minute-dialog-cn.html'
+})
+export class NVPOneMinuteDialogCN {
+	  constructor(
+    public dialogRef: MdDialogRef<NVPOneMinuteDialogCN>,
     ){}
 }

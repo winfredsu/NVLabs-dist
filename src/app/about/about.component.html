@@ -72,9 +72,10 @@
 					</ul>
 				</div>
 				<div class="col-lg-8 col-lg-pull-4">
-					<agm-map [latitude]="lat" [longitude]="lng" [scrollwheel]="true" [streetViewControl]="false" [mapTypeControl]="false" [scaleControl]="false" [zoomControl]="false" [zoom]="zoom" [styles]="styleArray">
+					<agm-map [hidden]="ipFromCN" [latitude]="lat" [longitude]="lng" [scrollwheel]="true" [streetViewControl]="false" [mapTypeControl]="false" [scaleControl]="false" [zoomControl]="false" [zoom]="zoom" [styles]="styleArray">
 						<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 					</agm-map>
+					<div id="map-cn" [hidden]="!ipFromCN"></div>
 				</div>
 			</div>
 

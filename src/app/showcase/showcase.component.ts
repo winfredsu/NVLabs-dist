@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { IpFromCNService } from '../ip-from-cn.service';
 
 @Component({
 	moduleId: module.id,
@@ -21,7 +22,10 @@ export class ShowcaseComponent {
 	templateUrl: './self-powered-wearables.component.html'
 })
 export class SelfPoweredWearablesComponent {
-
+	ipFromCN: boolean = false;
+	constructor(ipFromCNService: IpFromCNService) {
+		this.ipFromCN = ipFromCNService.ipFromCN();
+	}
 }
 
 @Component({
@@ -30,7 +34,10 @@ export class SelfPoweredWearablesComponent {
 	templateUrl: './transient-computing.component.html'
 })
 export class TransientComputingComponent {
-
+	ipFromCN: boolean = false;
+	constructor(ipFromCNService: IpFromCNService) {
+		this.ipFromCN = ipFromCNService.ipFromCN();
+	}
 }
 
 @Component({

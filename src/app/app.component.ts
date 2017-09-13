@@ -1,6 +1,9 @@
 import { Component, ElementRef, OnInit, HostListener } from '@angular/core';
 // import { DOCUMENT } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
+import { IpFromCNService } from './ip-from-cn.service';
+import 'rxjs/add/operator/map';
+
 declare var $: any;
 
 @Component({
@@ -9,12 +12,12 @@ declare var $: any;
 	templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-
 	constructor(
 		// @Inject(DOCUMENT) private document: Document,
 		// @ViewChild('navbarFixedTop') private elNavbarFixedTop: ElementRef,
 		private el: ElementRef,
-		private router: Router) {}
+		private router: Router,
+		private ipFromCNService: IpFromCNService ) {}
 
 	public addClass(className: string) {
 		this.el.nativeElement.classList.add(className);
@@ -27,7 +30,6 @@ export class AppComponent implements OnInit {
 	hide() {
 		$('.navbar-collapse.in').collapse('hide');
 	}
-
 
 	@HostListener('window:scroll', [])
 	onScroll() {
@@ -42,5 +44,6 @@ export class AppComponent implements OnInit {
 			}
 			window.scrollTo(0, 0)
 		});
+		this.ipFromCNService.getIpInfo();
 	}
 }

@@ -2,8 +2,11 @@
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1">
 			<h1>Transient Computing</h1>
-			<div class="embed-responsive embed-responsive-16by9 margin-b-30">
+			<div *ngIf="!ipFromCN" class="embed-responsive embed-responsive-16by9 margin-b-30">
     			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UaXRcAYKol8"></iframe>
+			</div>
+			<div *ngIf="ipFromCN" class="embed-responsive embed-responsive-16by9 margin-b-30">
+    			<iframe class="embed-responsive-item" src="https://www.bilibili.com/html/html5player.html?aid=14427793&cid=23539109&as_wide=1&autoplay=1&showinfo=0"></iframe>
 			</div>
 			<p>Embedded systems powered by energy harvesting has traditionally been coupled with large energy storage elements (rechargeable battery, supercapacitor, etc.), due to the erratic nature of energy source. Such system has disadvantages of large size, high leakage current and high maintenance cost. </p>
 			<p>Directly powering with energy harvester can help us get rid of energy storage and conversion circuits. This has pushed forward a new task execution paradigm -- <strong>transient computing</strong> -- where computation is performed only when power is available. While transient computing allows energy harvesting systems to have smaller size, lower cost and higher efficiency than traditional ones, it imposes tough requirements on the computing devices: <strong>they must make continuous computational progress using transient power supply.</strong></p>  
