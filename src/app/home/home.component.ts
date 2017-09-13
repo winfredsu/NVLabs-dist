@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
   openDialog(): void {
-  	if (this.ipFromCNService.ipFromCN) {
+  	if (this.ipFromCNService.ipFromCN()) {
   		let dialogRef = this.dialog.open(NVPOneMinuteDialogCN, {
 			width: '990px',
 			height: 'auto'
