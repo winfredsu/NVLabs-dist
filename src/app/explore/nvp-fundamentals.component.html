@@ -11,7 +11,6 @@
 				<img class="img-responsive" src="assets/explore/1.jpg" alt="Desired features of IoT processor">
 				<div class="caption">Figure 1: Four desired features of IoT processor</div>
 			</div>
-			<a routerLink="../nvp-fundamentals" fragment="test" (click)="onAnchorClick()">Test</a>
 			<p>Before we dive into nonvolatile processors in detail, let's start with a higher-level question: <strong>what are the desired features of processors in IoT edge devices?</strong> This question is quite important because the processor acts as the "brain" of IoT devices and handles most of the computation and control tasks. As shown in Figure 1, we identify four features that an IoT processor should possess:</p>
 			<ul>
 				<li><strong>Ultra-low power:</strong> The power envelopes for IoT edge devices are relatively small, and what's even worse, we have to reserve a large portion of power for wireless data transmission. For this reason, the processor must have ultra-low power consumption in both active and idle states.  </li>
@@ -34,7 +33,7 @@
 				<img class="img-responsive" src="assets/explore/3.jpg" alt="Nonvolatile processor: no power, no problem!">
 				<div class="caption">Figure 3: Nonvolatile processor: no power, no problem!</div>
 			</div>
-			<p id="test">The limitations discussed above motivate us to add non-volatility to standard CMOS logic. To do this, we combine the emerging nonvolatile memory technology with CMOS circuitry. As Figure 3 shows, each flip-flop in the processor is attached with a nonvolatile memory element, and a read/write driver helps to manage the data transfer between nonvolatile memory and the volatile flip-flop. When the processor runs in active mode, the nonvolatile memory is disconnected from the CMOS flip-flop, thus the processor's performance is not affected. When a power failure is about to come or the processor decides to enter standby mode, the nonvolatile memory element will take over the data held in CMOS flip-flop. In this way, the processor features bit-level non-volatility, and doesn't need any power for data retention.  <strong>And that's exactly what a nonvolatile processor is &mdash; no power? no problem!</strong></p> 
+			<p>The limitations discussed above motivate us to add non-volatility to standard CMOS logic. To do this, we combine the emerging nonvolatile memory technology with CMOS circuitry. As Figure 3 shows, each flip-flop in the processor is attached with a nonvolatile memory element, and a read/write driver helps to manage the data transfer between nonvolatile memory and the volatile flip-flop. When the processor runs in active mode, the nonvolatile memory is disconnected from the CMOS flip-flop, thus the processor's performance is not affected. When a power failure is about to come or the processor decides to enter standby mode, the nonvolatile memory element will take over the data held in CMOS flip-flop. In this way, the processor features bit-level non-volatility, and doesn't need any power for data retention.  <strong>And that's exactly what a nonvolatile processor is &mdash; no power? no problem!</strong></p> 
 			<div class="figure">
 				<img class="img-responsive" src="assets/explore/4.jpg" alt="Benefits of nonvolatile processor">
 				<div class="caption">Figure 4: Benefits of nonvolatile processor</div>

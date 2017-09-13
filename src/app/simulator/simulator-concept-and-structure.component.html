@@ -1,54 +1,56 @@
 <h2>
-<a id="user-content-contents" class="anchor" href="#contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contents</h2>
+<a id="contents" class="anchor" href="#contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contents</h2>
 <ul>
 <li>
-<a routerLink="/simulator/concept-and-structure" fragment="user-content-energy-objects" (click)="onAnchorClick()">Energy Objects</a>
+<a routerLink="." fragment="energy-objects" (click)="onAnchorClick()">Energy Objects</a>
 <ul>
-<li><a href="#Energy-Objects-Members">Members</a></li>
-<li><a href="#Energy-Objects-Interfaces">Interfaces</a></li>
+<li><a routerLink="." fragment="members" (click)="onAnchorClick()">Members</a></li>
+<li><a routerLink="." fragment="interfaces" (click)="onAnchorClick()">Interfaces</a></li>
 </ul>
 </li>
 <li>
-<a href="#Energy-Ports">Energy Ports</a>
+<a routerLink="." fragment="energy-ports" (click)="onAnchorClick()">Energy Ports</a>
 <ul>
-<li><a href="#Energy-Ports-Types-of-Energy-Ports">Types of Energy Ports</a></li>
-<li><a href="#Energy-Ports-Messages-Delivered-by-Energy-Port">Messages Delivered by Energy Port</a></li>
-<li><a href="#Energy-Ports-How-to-Connect-Energy-Ports">How to Connect Energy Ports?</a></li>
+<li><a routerLink="." fragment="types-of-energy-ports">Types of Energy Ports</a></li>
+<li><a routerLink="." fragment="messages-delivered-by-energy-port">Messages Delivered by Energy Port</a></li>
+<li><a routerLink="." fragment="how-to-connect-energy-ports">How to Connect Energy Ports?</a></li>
 </ul>
 </li>
 <li>
-<a href="#Energy-Management-Module">Energy Management Module</a>
+<a routerLink="." fragment="energy-management-module">Energy Management Module</a>
 <ul>
-<li><a href="#Energy-Management-Module-Members-and-Interfaces">Members and Interfaces</a></li>
-<li><a href="#Energy-Management-Module-State-Machine">State Machine</a></li>
-<li><a href="#Energy-Management-Module-Harvesting-Module">Harvest Module</a></li>
-<li><a href="#Energy-Management-Module-Python-Interfaces">Python Interfaces</a></li>
+<li><a routerLink="." fragment="members-and-interfaces">Members and Interfaces</a></li>
+<li><a routerLink="." fragment="state-machine">State Machine</a></li>
+<li><a routerLink="." fragment="harvesting-module">Harvest Module</a></li>
+<li><a routerLink="." fragment="python-interfaces">Python Interfaces</a></li>
 </ul>
 </li>
 <li>
-<a href="#Other-Concepts">Other Concepts</a>
+<a routerLink="." fragment="other-concepts">Other Concepts</a>
 <ul>
-<li><a href="#Other-Concepts-Energy-Events">Energy Events</a></li>
-<li><a href="#Other-Concepts-Energy-Profile">Energy Profile</a></li>
-<li><a href="#Other-Concepts-Debug-Flags">Debug Flags</a></li>
-<li><a href="#Other-Concepts-Statistics-and-Traces">Statistics and Traces</a></li>
+<li><a routerLink="." fragment="energy-events">Energy Events</a></li>
+<li><a routerLink="." fragment="energy-profile">Energy Profile</a></li>
+<li><a routerLink="." fragment="debug-flags">Debug Flags</a></li>
+<li><a routerLink="." fragment="statistics-and-traces">Statistics and Traces</a></li>
 </ul>
 </li>
-<li><a href="#Further-Reading">Further Reading</a></li>
+<li><a routerLink="." fragment="further-reading">Further Reading</a></li>
 </ul>
-<a name="user-content-Energy-Objects"></a>
+<a name="Energy-Objects"></a>
 <h2>
-<a id="user-content-energy-objects" class="anchor" href="#energy-objects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Objects</h2>
+<a id="energy-objects" class="anchor" routerLink="." fragment="energy-objects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Objects</h2>
 <p>Energy Object (aka "EnergyObject" in code) is a class that has members and
 interfaces related to energy behavior. EnergyObjects is implemented as one of
 SimObject's parent class, because every "Object" can have energy behavior.
 EnergyObject empowers SimObjects to take actions when receiving energy messages
 (such as power-on, power-off, back-up, etc.). The following picture shows the
 inheritance diagram of SimObject.</p>
-<p>[[images/sim_object.jpeg]]</p>
-<a name="user-content-Energy-Objects-Members"></a>
+<div class="figure-sm">
+  <img class="img-responsive" src="assets/simulator/sim_object.jpeg" alt="sim_object">
+</div>
+<a name="Energy-Objects-Members"></a>
 <h3>
-<a id="user-content-members" class="anchor" href="#members" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Members</h3>
+<a id="members" class="anchor" routerLink="." fragment="members" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Members</h3>
 <table>
 <thead>
 <tr>
@@ -67,9 +69,9 @@ inheritance diagram of SimObject.</p>
 </tr>
 </tbody>
 </table>
-<a name="user-content-Energy-Objects-Interfaces"></a>
+<a name="Energy-Objects-Interfaces"></a>
 <h3>
-<a id="user-content-interfaces" class="anchor" href="#interfaces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interfaces</h3>
+<a id="interfaces" class="anchor" routerLink="." fragment="interfaces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interfaces</h3>
 <table>
 <thead>
 <tr>
@@ -100,9 +102,9 @@ inheritance diagram of SimObject.</p>
 </tr>
 </tbody>
 </table>
-<a name="user-content-Energy-Ports"></a>
+<a name="Energy-Ports"></a>
 <h2>
-<a id="user-content-energy-ports" class="anchor" href="#energy-ports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Ports</h2>
+<a id="energy-ports" class="anchor" routerLink="." fragment="energy-ports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Ports</h2>
 <p>Energy Ports (aka "EnergyPort" in code) is a class that is used by
 SimObjects (EnergyObjects) to communicate with each other. It is very
 similar to Port in the original gem5 (used by MemObjects to communicate
@@ -112,9 +114,9 @@ connected Energy Ports. Normally, EnergyMsgs sent by master port are for
 notifying the slaves of state changes (power-on, power-off, back-up, etc)
 of the whole system, while reverse ones are for telling EnergyMgmt module
 that the SimObject is consuming a certain amount of energy in most time.</p>
-<a name="user-content-Energy-Ports-Types-of-Energy-Ports"></a>
+<a name="Energy-Ports-Types-of-Energy-Ports"></a>
 <h3>
-<a id="user-content-types-of-energy-ports" class="anchor" href="#types-of-energy-ports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Types of Energy Ports</h3>
+<a id="types-of-energy-ports" class="anchor" routerLink="." fragment="types-of-energy-ports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Types of Energy Ports</h3>
 <p>There are two kinds of energy ports: master ports and slave ports. They can
 be connected with each other (master-slave), but cannot be connected within
 one kind (master-master, slave-slave). Functionally they have nearly no difference.
@@ -122,9 +124,9 @@ The only different point of these two kinds is that one master port can be
 connected with multiple slave ports, while a slave port can only be connected
 to one master port. Master port has an array of slave ports it is connected with,
 and slave port saves the master port it is connected to.</p>
-<a name="user-content-Energy-Ports-Messages-Delivered-by-Energy-Port"></a>
+<a name="Energy-Ports-Messages-Delivered-by-Energy-Port"></a>
 <h3>
-<a id="user-content-messages-delivered-by-energy-port" class="anchor" href="#messages-delivered-by-energy-port" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Messages Delivered by Energy Port</h3>
+<a id="messages-delivered-by-energy-port" class="anchor" routerLink="." fragment="messages-delivered-by-energy-port" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Messages Delivered by Energy Port</h3>
 <p>Energy ports communicate with each other by sending a structure called EnergyMsg.</p>
 <div class="highlight highlight-source-c"><pre><span class="pl-k">struct</span> EnergyMsg
 {{'{'}}
@@ -139,9 +141,9 @@ Zero value of type is preserved because it means energy consuming no matter
 what energy state machine the whole system uses. The variance "value" is used
 to send energy values. For example, it means how much energy a SimObject has
 consumed when type is equal to zero.</p>
-<a name="user-content-Energy-Ports-How-to-Connect-Energy-Ports"></a>
+<a name="Energy-Ports-How-to-Connect-Energy-Ports"></a>
 <h3>
-<a id="user-content-how-to-connect-energy-ports" class="anchor" href="#how-to-connect-energy-ports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Connect Energy Ports?</h3>
+<a id="how-to-connect-energy-ports" class="anchor" routerLink="." fragment="how-to-connect-energy-ports" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Connect Energy Ports?</h3>
 <p>The next thing we need to concern is that how we determine how those SimObjects
 (with energy ports) is connected. This can be done in simulating scripts.
 Gem5-NVP has a swig interface in python to connect two SimObjects' energy ports.</p>
@@ -158,19 +160,19 @@ port and master energy port). Users can connect them simply using "=". For
 example, if you want the cpu to be under the control of EnergyMgmt module, you
 can use:</p>
 <div class="highlight highlight-source-python"><pre>cpu.s_energy_port <span class="pl-k">=</span> mgmt.m_energy_port</pre></div>
-<a name="user-content-Energy-Management-Module"></a>
+<a name="Energy-Management-Module"></a>
 <h2>
-<a id="user-content-energy-management-module" class="anchor" href="#energy-management-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Management Module</h2>
+<a id="energy-management-module" class="anchor" routerLink="." fragment="energy-management-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Management Module</h2>
 <p>Energy Management module (aka EnergyMgmt in code) is a new kind of SimObject in
 gem5-NVP. Its function is to simulate the energy control module in real systems.
 It is able to simulate energy harvesting, voltage detection, system state control,
 and a lot of other functions in real systems. Normally EnergyMgmt is the only
 SimObject that uses the master port while running.</p>
-<a name="user-content-Energy-Management-Module-Members-and-Interfaces"></a>
+<a name="Energy-Management-Module-Members-and-Interfaces"></a>
 <h3>
-<a id="user-content-members-and-interfaces" class="anchor" href="#members-and-interfaces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Members and Interfaces</h3>
+<a id="members-and-interfaces" class="anchor" routerLink="." fragment="members-and-interfaces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Members and Interfaces</h3>
 <h5>
-<a id="user-content-members-1" class="anchor" href="#members-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Members</h5>
+<a id="members-1" class="anchor" routerLink="." fragment="members-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Members</h5>
 <table>
 <thead>
 <tr>
@@ -218,7 +220,7 @@ SimObject that uses the master port while running.</p>
 </tbody>
 </table>
 <h5>
-<a id="user-content-interfaces-1" class="anchor" href="#interfaces-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interfaces</h5>
+<a id="interfaces-1" class="anchor" routerLink="." fragment="interfaces-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interfaces</h5>
 <table>
 <thead>
 <tr>
@@ -253,9 +255,9 @@ SimObject that uses the master port while running.</p>
 </tr>
 </tbody>
 </table>
-<a name="user-content-Energy-Management-Module-State-Machine"></a>
+<a name="Energy-Management-Module-State-Machine"></a>
 <h3>
-<a id="user-content-state-machine" class="anchor" href="#state-machine" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>State Machine</h3>
+<a id="state-machine" class="anchor" routerLink="." fragment="state-machine" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>State Machine</h3>
 <p>In most non-volatile system, there is an energy state machine to control the system's
 power state. Gem5-NVP has an energy state machine object to control the system's state.
 There is a base state machine class called "BaseEnergySM" defining the basic interface an
@@ -276,7 +278,7 @@ called inside "update". Normally the field "type" in EnergyMsg is defined when d
 energy state machine, and the operation other parts in the system take is implemented
 according to those message types.</p>
 <h5>
-<a id="user-content-example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h5>
+<a id="example" class="anchor" routerLink="." fragment="example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h5>
 <p>Here is an example of a very straight-forward energy state machine, which is the default
 energy state machine gem5-NVP provides. There are only 2 states, power-on and power-off in
 the state machine. Once the energy goes below zero, power-off message is sent to the whole
@@ -300,9 +302,9 @@ function of such energy state machine.</p>
   }
 }</pre></div>
 <p>The derived class of the state machine is called "SimpleEnergySM" in code.</p>
-<a name="user-content-Energy-Management-Module-Harvesting-Module"></a>
+<a name="Energy-Management-Module-Harvesting-Module"></a>
 <h3>
-<a id="user-content-harvesting-module" class="anchor" href="#harvesting-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Harvesting Module</h3>
+<a id="harvesting-module" class="anchor" routerLink="." fragment="harvesting-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Harvesting Module</h3>
 <p>Real-world systems have complicated energy harvest module, which includes voltage transform
 module, rectification module, etc. Gem5-NVP does not care those complex part of energy flow.
 It only receives energy profile which contains power amplitude at discrete time. The harvesting
@@ -313,7 +315,7 @@ The following interface is what a user of gem5-NVP should understand.</p>
 profile to perform its calculation. The interface returns the remained energy in the capacitor
 after the system has harvested the energy provided in the energy profile.</p>
 <h5>
-<a id="user-content-example-1" class="anchor" href="#example-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h5>
+<a id="example-1" class="anchor" routerLink="." fragment="example-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h5>
 <p>Like the energy state machine module, energy harvesting module also has a default derived class,
 named "SimpleHarvest". The "energy_harvest" method in it is shown below.</p>
 <div class="highlight highlight-source-c"><pre><span class="pl-k">double</span> <span class="pl-en">SimpleHarvest::energy_harvest</span>(<span class="pl-k">double</span> energy_harvested, <span class="pl-k">double</span> energy_remained)
@@ -323,32 +325,32 @@ named "SimpleHarvest". The "energy_harvest" method in it is shown below.</p>
 <p>All the energy in the energy profile goes into the capacitor. Simple, isn't it? In real systems,
 it is really hard to harvest more energy once there is abundant energy in the capacitor, and such
 limitation can be described in the "energy_harvest" method.</p>
-<a name="user-content-Energy-Management-Module-Python-Interfaces"></a>
+<a name="Energy-Management-Module-Python-Interfaces"></a>
 <h3>
-<a id="user-content-python-interfaces" class="anchor" href="#python-interfaces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python Interfaces</h3>
+<a id="python-interfaces" class="anchor" routerLink="." fragment="python-interfaces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python Interfaces</h3>
 <p>It is possible to control some of the behavior of EnergyMgmt module through python scripts as well as
 arguments in shell command. The "Get Started" page provides some examples, and users can checkout
 "configs/example/se_engy.py" to find out how to change the config in python script.</p>
-<a name="user-content-Other-Concepts"></a>
+<a name="Other-Concepts"></a>
 <h2>
-<a id="user-content-other-concepts" class="anchor" href="#other-concepts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other Concepts</h2>
+<a id="other-concepts" class="anchor" routerLink="." fragment="other-concepts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other Concepts</h2>
 <p>There are some other concepts in gem5-NVP that is important.</p>
-<a name="user-content-Other-Concepts-Energy-Events"></a>
+<a name="Other-Concepts-Energy-Events"></a>
 <h3>
-<a id="user-content-energy-events" class="anchor" href="#energy-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Events</h3>
+<a id="energy-events" class="anchor" routerLink="." fragment="energy-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Events</h3>
 <p>The state changes of the system is implemented through events. Once the state should be changed, the
 energy state machine put a "state change" event at current tick through "broadcastMsg". Energy state-change
 event is designed to have lower priority than other events so that state changes happens after all other
 events at current tick finish. In this way, state changes would not happen inside one process and bring
 conflicts.</p>
-<a name="user-content-Other-Concepts-Energy-Profile"></a>
+<a name="Other-Concepts-Energy-Profile"></a>
 <h3>
-<a id="user-content-energy-profile" class="anchor" href="#energy-profile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Profile</h3>
+<a id="energy-profile" class="anchor" routerLink="." fragment="energy-profile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Energy Profile</h3>
 <p>Energy profile is a file that contains amplitude of external power source at discrete time points. All the
 values in the profile should be separated by line break or space.</p>
-<a name="user-content-Other-Concepts-Debug-Flags"></a>
+<a name="Other-Concepts-Debug-Flags"></a>
 <h3>
-<a id="user-content-debug-flags" class="anchor" href="#debug-flags" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Debug Flags</h3>
+<a id="debug-flags" class="anchor" routerLink="." fragment="debug-flags" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Debug Flags</h3>
 <p>A new debug flag, "EnergyMgmt", is introduced into gem5 by gem5-NVP. Users can use the following command to
 activate the debug flag:</p>
 <div class="highlight highlight-source-shell"><pre>build/ARM/gem5.debug --debug-flag=EnergyMgmt --debug-file=your_output_file ...</pre></div>
@@ -360,19 +362,19 @@ code and use "DPRINTF" to print the outputs.</p>
   <span class="pl-en">DPRINTF</span>(EnergyMgmt, <span class="pl-s"><span class="pl-pds">"</span>Hello!<span class="pl-cce">\n</span><span class="pl-pds">"</span></span>);
 ...
 </pre></div>
-<a name="user-content-Other-Concepts-Statistics-and-Traces"></a>
+<a name="Other-Concepts-Statistics-and-Traces"></a>
 <h3>
-<a id="user-content-statistics-and-traces" class="anchor" href="#statistics-and-traces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Statistics and Traces</h3>
+<a id="statistics-and-traces" class="anchor" routerLink="." fragment="statistics-and-traces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Statistics and Traces</h3>
 <p>TBD</p>
-<a name="user-content-Further-Reading"></a>
+<a name="Further-Reading"></a>
 <h2>
-<a id="user-content-further-reading" class="anchor" href="#further-reading" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further Reading</h2>
+<a id="further-reading" class="anchor" routerLink="." fragment="further-reading" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further Reading</h2>
 <ul>
-<li><a href="http://gem5.org/SimObjects">Introduction to SimObject</a></li>
-<li><a href="http://gem5.org/Memory_System">Introduction to Mem System</a></li>
-<li><a href="http://gem5.org/General_Memory_System">Another Introduction to Mem System</a></li>
-<li><a href="http://learning.gem5.org/book/part2/helloobject.html">How to Add Your Own SimObject</a></li>
-<li><a href="http://learning.gem5.org/book/part2/memoryobject.html">How to Add Simple MemObject</a></li>
-<li><a href="http://pages.cs.wisc.edu/%7Edavid/courses/cs752/Spring2015/gem5-tutorial/part2/simobject.html">Creating your first SimObject</a></li>
+<li><a href="http://gem5.org/SimObjects" target="_blank">Introduction to SimObject</a></li>
+<li><a href="http://gem5.org/Memory_System" target="_blank">Introduction to Mem System</a></li>
+<li><a href="http://gem5.org/General_Memory_System" target="_blank">Another Introduction to Mem System</a></li>
+<li><a href="http://learning.gem5.org/book/part2/helloobject.html" target="_blank">How to Add Your Own SimObject</a></li>
+<li><a href="http://learning.gem5.org/book/part2/memoryobject.html" target="_blank">How to Add Simple MemObject</a></li>
+<li><a href="http://pages.cs.wisc.edu/%7Edavid/courses/cs752/Spring2015/gem5-tutorial/part2/simobject.html" target="_blank">Creating your first SimObject</a></li>
 </ul>
 

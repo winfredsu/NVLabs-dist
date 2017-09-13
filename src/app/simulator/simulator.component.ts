@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
 	moduleId: module.id,
@@ -80,13 +80,39 @@ export class SimulatorGettingStartedComponent {
 	selector: 'nvlabs-simulator-concept-and-structure',
 	templateUrl: './simulator-concept-and-structure.component.html'
 })
-export class SimulatorConceptAndStructureComponent {
-  constructor( private route: ActivatedRoute ) {}
-
+export class SimulatorConceptAndStructureComponent implements OnInit {
+  constructor( 
+		private route: ActivatedRoute, 
+		private router: Router,
+		@Input('SimulatorComponent') private simulatorComponent: SimulatorComponent
+		){}
+	
+	offset: number;
+	
+	ngOnInit() {
+		
+		this.router.events.subscribe(s => {
+			if (s instanceof NavigationEnd) {
+				const tree = this.router.parseUrl(this.router.url);
+				if (tree.fragment) {
+					const element = document.querySelector("#" + tree.fragment);
+					if (element) {
+						this.offset = this.simulatorComponent.titleMinHeight + this.simulatorComponent.navMinHeight + 77;
+						element.scrollIntoView();
+						window.scrollBy(0, -this.offset);
+					}
+				}
+			}
+		});
+	}
   onAnchorClick ( ) {
     this.route.fragment.subscribe ( f => {
       const element = document.querySelector ( "#" + f );
-      if ( element ) element.scrollIntoView ();
+      if ( element ) {
+				this.offset = this.simulatorComponent.titleMinHeight + this.simulatorComponent.navMinHeight + 77;
+				element.scrollIntoView ();
+				window.scrollBy(0, -this.offset);
+			}
     });
   }
 }

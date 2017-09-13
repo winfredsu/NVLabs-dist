@@ -1540,6 +1540,13 @@ agm-map {
 	margin-bottom: 20px;
 	text-align: center;
 }
+.plain-content .figure-sm {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 .plain-content .caption {
 	font-style: italic;

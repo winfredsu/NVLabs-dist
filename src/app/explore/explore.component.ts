@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -21,27 +21,6 @@ export class ExploreComponent {
 	templateUrl: './nvp-fundamentals.component.html'
 })
 export class NVPFundamentalsComponent {
-  constructor( private route: ActivatedRoute, private router: Router ) {}
-	ngOnInit() {
-    this.router.events.subscribe(s => {
-      if (s instanceof NavigationEnd) {
-        const tree = this.router.parseUrl(this.router.url);
-        if (tree.fragment) {
-          const element = document.querySelector("#" + tree.fragment);
-          if (element) { element.scrollIntoView(); }
-        }
-      }
-    });
-  }
-  onAnchorClick ( ) {
-    this.route.fragment.subscribe ( f => {
-      const element = document.querySelector ( "#" + f );
-      if ( element ) {
-      	element.scrollIntoView ({block: "start", inline:"start"});
-      	window.scrollBy (0, -107);
-      }
-    });
-  }
 }
 
 @Component({

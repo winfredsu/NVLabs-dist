@@ -1,9 +1,9 @@
 <h2>
 <a id="user-content-pre-requirement" class="anchor" href="#pre-requirement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre-Requirement</h2>
-<p>Gem5-NVP depends on nothing besides the dependencies of gem5 simulator. Tools needed before building gem5-NVP can be found at <a href="http://www.gem5.org/Dependencies">http://www.gem5.org/Dependencies</a>.</p>
+<p>Gem5-NVP depends on nothing besides the dependencies of gem5 simulator. Tools needed before building gem5-NVP can be found at <a href="http://www.gem5.org/Dependencies" target="_blank">http://www.gem5.org/Dependencies</a>.</p>
 <h2>
 <a id="user-content-download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
-<p>Gem5-NVP uses github to control its version. The latest version can be found at <a href="https://github.com/zlfben/gem5">https://github.com/zlfben/gem5</a>, and there are previous versions among tags of the repository (nvp-v*.*). You can get the latest stable version like this:</p>
+<p>Gem5-NVP uses github to control its version. The latest version can be found at <a href="https://github.com/zlfben/gem5" target="_blank">https://github.com/zlfben/gem5</a>, and there are previous versions among tags of the repository (nvp-v*.*). You can get the latest stable version like this:</p>
 <div class="highlight highlight-source-shell"><pre>git clone https://github.com/zlfben/gem5.git
 <span class="pl-c1">cd</span> gem5
 git checkout nvp-v2.0</pre></div>
@@ -109,7 +109,7 @@ m5.instantiate()
 <span class="pl-c1">print</span> <span class="pl-s"><span class="pl-pds">"</span>Beginning simulation!<span class="pl-pds">"</span></span>
 exit_event <span class="pl-k">=</span> m5.simulate()
 <span class="pl-c1">print</span> <span class="pl-s"><span class="pl-pds">'</span>Exiting @ tick <span class="pl-c1">%i</span> because <span class="pl-c1">%s</span><span class="pl-pds">'</span></span> <span class="pl-k">%</span> (m5.curTick(), exit_event.getCause())</pre></div>
-<p>Now gem5-NVP only supports AtomicSimpleCPU. If you wants to add support for other models, you can visit <a routerLink="/simulator/documentation">CONCEPT &amp; STRUCTURE</a> to get more information about the workflow of gem5-NVP and implement energy-aware behavior of the model you want. If you want to simulate of a system that contains external devices, you may want to check out the page <a href="https://github.com/zlfben/gem5/wiki/Virtual-Devices">https://github.com/zlfben/gem5/wiki/Virtual-Devices</a> for more information. The code mentioned above can be found at "configs/example/simple_engy.py"</p>
+<p>Now gem5-NVP only supports AtomicSimpleCPU. If you wants to add support for other models, you can visit <a routerLink="/simulator/concept-and-structure">CONCEPT &amp; STRUCTURE</a> to get more information about the workflow of gem5-NVP and implement energy-aware behavior of the model you want. If you want to simulate of a system that contains external devices, you may want to check out the page <a href="https://github.com/zlfben/gem5/wiki/Virtual-Devices" target="_blank">https://github.com/zlfben/gem5/wiki/Virtual-Devices</a> for more information. The code mentioned above can be found at "configs/example/simple_engy.py"</p>
 <h4>
 <a id="user-content-simulation-via-sample-simulation-script" class="anchor" href="#simulation-via-sample-simulation-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Simulation via Sample Simulation Script</h4>
 <p>Gem5-nvp provides an alternated script based on "./configs/example/se.py" to simulate energy-related systems, using System Call Emulation Mode in gem5. The path to the script is "./configs/example/se_engy.py". The script works just as simple_engy.py, but receives parameters to control the energy behaviors.</p>
@@ -164,27 +164,27 @@ To run exactly like gem5 (No energy behavior is simulated):</p>
 <div class="highlight highlight-source-shell"><pre>build/ARM/gem5.debug --debug-flags=EnergyMgmt --debug-file=a.out configs/example/se_engy.py -c tests/test-progs/hello/bin/arm/linux/hello --energy-profile=./profile/energy_prof --energy-time-unit=<span class="pl-s"><span class="pl-pds">'</span>1us<span class="pl-pds">'</span></span> </pre></div>
 <p>To use the custom script:</p>
 <div class="highlight highlight-source-shell"><pre>build/ARM/gem5.debug configs/example/simple_engy.py</pre></div>
-<p>Gem5-NVP also supports more advanced functions which require developers to modify source code, like simulating systems with 2-threshold energy state machine. An example of such usage can be found at <a routerLink="/simulator/examples">EXAMPLE</a>.</p>
+<p>Gem5-NVP also supports more advanced functions which require developers to modify source code, like simulating systems with 2-threshold energy state machine. An example of such usage can be found at <a routerLink="/simulator/example">EXAMPLE</a>.</p>
 <h2>
 <a id="user-content-gem5-readme" class="anchor" href="#gem5-readme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gem5 README</h2>
 <p>This is the gem5 simulator.</p>
-<p>The main website can be found at <a href="http://www.gem5.org">http://www.gem5.org</a></p>
-<p>A good starting point is <a href="http://www.gem5.org/Introduction">http://www.gem5.org/Introduction</a>, and for
+<p>The main website can be found at <a href="http://www.gem5.org" target="_blank">http://www.gem5.org</a></p>
+<p>A good starting point is <a href="http://www.gem5.org/Introduction" target="_blank">http://www.gem5.org/Introduction</a>, and for
 more information about building the simulator and getting started
-please see <a href="http://www.gem5.org/Documentation">http://www.gem5.org/Documentation</a> and
-<a href="http://www.gem5.org/Tutorials">http://www.gem5.org/Tutorials</a>.</p>
+please see <a href="http://www.gem5.org/Documentation"> target="_blank"http://www.gem5.org/Documentation</a> and
+<a href="http://www.gem5.org/Tutorials" target="_blank">http://www.gem5.org/Tutorials</a>.</p>
 <p>To build gem5, you will need the following software: g++ or clang,
 Python (gem5 links in the Python interpreter), SCons, SWIG, zlib, m4,
 and lastly protobuf if you want trace capture and playback
-support. Please see <a href="http://www.gem5.org/Dependencies">http://www.gem5.org/Dependencies</a> for more details
+support. Please see <a href="http://www.gem5.org/Dependencies" target="_blank">http://www.gem5.org/Dependencies</a> for more details
 concerning the minimum versions of the aforementioned tools.</p>
 <p>Once you have all dependencies resolved, type 'scons
 build//gem5.opt' where ARCH is one of ALPHA, ARM, NULL, MIPS,
 POWER, SPARC, or X86. This will build an optimized version of the gem5
 binary (gem5.opt) for the the specified architecture. See
-<a href="http://www.gem5.org/Build_System">http://www.gem5.org/Build_System</a> for more details and options.</p>
+<a href="http://www.gem5.org/Build_System" target="_blank">http://www.gem5.org/Build_System</a> for more details and options.</p>
 <p>With the simulator built, have a look at
-<a href="http://www.gem5.org/Running_gem5">http://www.gem5.org/Running_gem5</a> for more information on how to use
+<a href="http://www.gem5.org/Running_gem5" target="_blank">http://www.gem5.org/Running_gem5</a> for more information on how to use
 gem5.</p>
 <p>The basic source release includes these subdirectories:</p>
 <ul>
@@ -198,6 +198,6 @@ gem5.</p>
 <p>To run full-system simulations, you will need compiled system firmware
 (console and PALcode for Alpha), kernel binaries and one or more disk
 images. Please see the gem5 download page for these items at
-<a href="http://www.gem5.org/Download">http://www.gem5.org/Download</a></p>
+<a href="http://www.gem5.org/Download" target="_blank">http://www.gem5.org/Download</a></p>
 <p>If you have questions, please send mail to <a href="mailto:gem5-users@gem5.org">gem5-users@gem5.org</a></p>
 <p>Enjoy using gem5 and please share your modifications and extensions.</p>
