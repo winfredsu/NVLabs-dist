@@ -12,8 +12,8 @@ declare var AMap: any;
 export class AboutComponent implements OnInit {
 	ipFromCN: boolean=false;
 
-	lat: number = 40.005217;
-	lng: number = 116.336007;
+	lat: number = 40.010938;
+	lng: number = 116.347826;
 	zoom: number = 13;
   styleArray = [{
       featureType: "all",
@@ -48,7 +48,7 @@ export class AboutComponent implements OnInit {
 
 		let amap = new AMap.Map('map-cn',{
 	    zoom: 13,
-	    center: [116.336007,40.005217]//new AMap.LngLat(116.39,39.9)
+	    center: [116.347826,40.010938]//new AMap.LngLat(116.39,39.9)
 		});
 		let marker = new AMap.Marker({
 			map: amap

@@ -1543,6 +1543,13 @@ agm-map {
 	margin-bottom: 20px;
 	text-align: center;
 }
+
+.plain-content .figure img {
+	max-width: 100%;
+	display: inline;
+	height: auto;
+}
+
 .plain-content .figure-sm {
   max-width: 600px;
   margin-left: auto;
