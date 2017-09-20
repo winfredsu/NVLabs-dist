@@ -1408,8 +1408,9 @@ fieldset[disabled] .btn-theme {
     color: #13b1cd;
 }
 
-.product-content button {
+.product-content a.button {
 		margin-bottom: 20px;
+		color: #fff;
 }
 
 .product-nav {
