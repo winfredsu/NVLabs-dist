@@ -1409,6 +1409,10 @@ fieldset[disabled] .btn-theme {
 		color: #fff;
 }
 
+.plain-content a.button:hover {
+	color: #fff;
+}
+
 .product-nav .nav-wrapper {
 /*    padding-bottom: 10px;*/
     width: 847.5px;
